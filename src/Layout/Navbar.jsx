@@ -250,7 +250,7 @@ const Navbar = () => {
           {/*  */}
           <div className="flex items-center justify-between lg:gap-7">
             {/*  */}
-            <div>
+            <div className="block lg:hidden">
               <div
                 onClick={toggleDrawer(true)}
                 className="text-3xl text-[#2D9CDB]"
