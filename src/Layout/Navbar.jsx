@@ -238,7 +238,7 @@ const Navbar = () => {
     )
 
     return (
-      <nav className="sticky top-0 bg-[#F9F9F9]">
+      <nav className="sticky top-0 bg-[#F9F9F9] z-50">
         <div className="w-[95%] mx-auto flex flex-col gap-7 py-4 lg:flex-row lg:items-center lg:justify-between lg:w-full lg:py-6">
           {/* head text */}
           <div className="text-center lg:text-start">
