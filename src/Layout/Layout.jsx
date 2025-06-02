@@ -8,7 +8,7 @@ const Layout = () => {
     <div className="w-full flex gap-4 align-center justify-between">
       <Slidebar />
 
-      <div className="w-screen lg:ml-[310px] lg:mr-9">
+      <div className="w-screen lg:ml-[320px] lg:mr-9">
         <Navbar />
         <div className="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
