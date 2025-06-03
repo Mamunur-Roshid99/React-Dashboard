@@ -13,6 +13,7 @@ import Course from "./pages/Course";
 import Video from "./pages/Video";
 import ContactForm from "./pages/ContactForm";
 import Author from "./pages/Author";
+import PreviewBlog from "./pages/PreviewBlog";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="/students" element={<Students />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/preview" element={<PreviewBlog />} />
           <Route path="/newsletter" element={<NewsLetter />} />
           <Route path="/course" element={<Course />} />
           <Route path="/video" element={<Video />} />

@@ -1,7 +1,16 @@
-import React from 'react'
-import ContactTable from '../components/ContactTable'
+import React, { useEffect } from "react";
+import ContactTable from "../components/ContactTable";
 
 const ContactForm = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100); // Delay ensures component is mounted
+  }, []);
+
   return (
     <div className="container w-[95%] mx-auto mt-5 lg:w-full">
       <div className="flex justify-between items-center mb-8">
@@ -13,6 +22,6 @@ const ContactForm = () => {
       <ContactTable />
     </div>
   );
-}
+};
 
-export default ContactForm
+export default ContactForm;

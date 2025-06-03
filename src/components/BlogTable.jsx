@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BlogTable = () => {
   const blogs = Array.from({ length: 50 }).map((_, index) => ({
@@ -72,7 +73,9 @@ const BlogTable = () => {
                 </td>
                 <td className="px-4 py-4 border-b border-b-[#E9E7FD] text-[#23272E]">
                   <button className="text-[#4D4D4D] pr-3 cursor-pointer">
-                    <FaEye />
+                    <Link to="/blog/preview">
+                      <FaEye />
+                    </Link>
                   </button>
                   <button className="text-[#FF7161] pr-3 cursor-pointer">
                     <FaTrash />

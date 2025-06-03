@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
 import { FaArrowRightLong } from "react-icons/fa6";
-import UpdatePackageChart from '../components/UpdatePackageChart';
-import BarChart from '../components/BarChart';
-import LineChart from '../components/LineChart';
+import UpdatePackageChart from "../components/UpdatePackageChart";
+import BarChart from "../components/BarChart";
+import LineChart from "../components/LineChart";
 
 const Dashboard = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100); // Delay ensures component is mounted
+  }, []);
+
   return (
     <section>
       <div className="container w-[95%] mx-auto lg:w-full">
@@ -59,6 +68,6 @@ const Dashboard = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Dashboard
+export default Dashboard;

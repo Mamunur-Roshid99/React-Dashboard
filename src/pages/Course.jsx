@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
-import CourseTable from '../components/CourseTable';
+import CourseTable from "../components/CourseTable";
 
 const Course = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100); // Delay ensures component is mounted
+  }, []);
+
   return (
     <div className="container w-[95%] mx-auto mt-5 lg:w-full">
       <div className="flex justify-between items-center mb-8">
@@ -16,6 +25,6 @@ const Course = () => {
       <CourseTable />
     </div>
   );
-}
+};
 
-export default Course
+export default Course;

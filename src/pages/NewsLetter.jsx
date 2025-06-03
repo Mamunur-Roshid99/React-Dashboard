@@ -1,7 +1,16 @@
-import React from 'react'
-import NewsLetterTable from '../components/NewsLetterTable';
+import React, { useEffect } from "react";
+import NewsLetterTable from "../components/NewsLetterTable";
 
 const NewsLetter = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100); // Delay ensures component is mounted
+  }, []);
+
   return (
     <div className="container w-[95%] mx-auto mt-5 lg:w-full">
       <div className="flex justify-between items-center mb-8">
@@ -15,6 +24,6 @@ const NewsLetter = () => {
       <NewsLetterTable />
     </div>
   );
-}
+};
 
-export default NewsLetter
+export default NewsLetter;

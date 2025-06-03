@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
-import StudentTable from '../components/StudentTable'
+import StudentTable from "../components/StudentTable";
 
 import { TiArrowSortedDown } from "react-icons/ti";
 
 const Students = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100); // Delay ensures component is mounted
+  }, []);
+
   return (
-    <div className='container w-[95%] mx-auto mt-5 lg:w-full'>
+    <div className="container w-[95%] mx-auto mt-5 lg:w-full">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-xl font-semibold text-[#464255] lg:text-xl">
           Our Students
@@ -21,6 +30,6 @@ const Students = () => {
       <StudentTable />
     </div>
   );
-}
+};
 
-export default Students
+export default Students;
