@@ -56,7 +56,10 @@ const StudentTable = () => {
           </thead>
           <tbody>
             {paginatedData.map((student) => (
-              <tr key={student.id} className="border-t">
+              <tr
+                key={student.id}
+                className="bg-transparent hover:bg-[#E4E4E4]"
+              >
                 <td className="px-4 py-4 border-b border-b-[#DBDADE] text-[#23272E] font-medium">
                   {student.name}
                 </td>

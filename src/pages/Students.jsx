@@ -6,7 +6,7 @@ import { TiArrowSortedDown } from "react-icons/ti";
 
 const Students = () => {
   return (
-    <div className='w-[95%] mx-auto mt-5 lg:w-full'>
+    <div className='container w-[95%] mx-auto mt-5 lg:w-full'>
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-xl font-semibold text-[#464255] lg:text-xl">
           Our Students

@@ -8,6 +8,11 @@ import Layout from "./Layout/Layout";
 import Dashboard from "./pages/Dashboard";
 import Students from "./pages/Students";
 import Blog from "./pages/Blog";
+import NewsLetter from "./pages/NewsLetter";
+import Course from "./pages/Course";
+import Video from "./pages/Video";
+import ContactForm from "./pages/ContactForm";
+import Author from "./pages/Author";
 
 function App() {
   return (
@@ -17,6 +22,11 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="/students" element={<Students />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/newsletter" element={<NewsLetter />} />
+          <Route path="/course" element={<Course />} />
+          <Route path="/video" element={<Video />} />
+          <Route path="/form" element={<ContactForm />} />
+          <Route path="/author" element={<Author />} />
         </Route>
       </Routes>
     </BrowserRouter>

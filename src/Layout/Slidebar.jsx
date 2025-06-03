@@ -83,7 +83,8 @@ const Slidebar = () => {
             }`}
             onClick={() => setActiveItem("blog")}
           >
-            <Link to="/blog"
+            <Link
+              to="/blog"
               className={`w-full flex items-center gap-5 py-4 px-5 text-lg cursor-pointer ${
                 activeItem === "blog"
                   ? "bg-[#00594526] text-[#2D9CDB] rounded-lg font-semibold"
@@ -103,7 +104,8 @@ const Slidebar = () => {
             }`}
             onClick={() => setActiveItem("newsletter")}
           >
-            <div
+            <Link
+              to="/newsletter"
               className={`w-full flex items-center gap-5 py-4 px-5 text-lg cursor-pointer ${
                 activeItem === "newsletter"
                   ? "bg-[#00594526] text-[#2D9CDB] rounded-lg font-semibold"
@@ -112,7 +114,7 @@ const Slidebar = () => {
             >
               <IoNewspaper />
               <h1>News Letter</h1>
-            </div>
+            </Link>
           </div>
           {/* Course */}
           <div
@@ -123,7 +125,8 @@ const Slidebar = () => {
             }`}
             onClick={() => setActiveItem("course")}
           >
-            <div
+            <Link
+              to="/course"
               className={`w-full flex items-center gap-5 py-4 px-5 text-lg cursor-pointer ${
                 activeItem === "course"
                   ? "bg-[#00594526] text-[#2D9CDB] rounded-lg font-semibold"
@@ -132,7 +135,7 @@ const Slidebar = () => {
             >
               <SiDiscourse />
               <h1>Course</h1>
-            </div>
+            </Link>
           </div>
           {/* video */}
           <div
@@ -143,7 +146,7 @@ const Slidebar = () => {
             }`}
             onClick={() => setActiveItem("video")}
           >
-            <div
+            <Link to="/video"
               className={`w-full flex items-center gap-5 py-4 px-5 text-lg cursor-pointer ${
                 activeItem === "video"
                   ? "bg-[#00594526] text-[#2D9CDB] rounded-lg font-semibold"
@@ -152,7 +155,7 @@ const Slidebar = () => {
             >
               <FiVideo />
               <h1>Video</h1>
-            </div>
+            </Link>
           </div>
           {/* form */}
           <div
@@ -161,7 +164,7 @@ const Slidebar = () => {
             }`}
             onClick={() => setActiveItem("form")}
           >
-            <div
+            <Link to="/form"
               className={`w-full flex items-center gap-5 py-4 px-5 text-lg cursor-pointer ${
                 activeItem === "form"
                   ? "bg-[#00594526] text-[#2D9CDB] rounded-lg font-semibold"
@@ -170,7 +173,7 @@ const Slidebar = () => {
             >
               <FaWpforms />
               <h1>Form</h1>
-            </div>
+            </Link>
           </div>
           {/* Author */}
           <div
@@ -181,7 +184,7 @@ const Slidebar = () => {
             }`}
             onClick={() => setActiveItem("author")}
           >
-            <div
+            <Link to="/author"
               className={`w-full flex items-center gap-5 py-4 px-5 text-lg cursor-pointer ${
                 activeItem === "author"
                   ? "bg-[#00594526] text-[#2D9CDB] rounded-lg font-semibold"
@@ -190,7 +193,7 @@ const Slidebar = () => {
             >
               <FaUserAlt />
               <h1>Author</h1>
-            </div>
+            </Link>
           </div>
           {/* Setting */}
           <div
