@@ -14,6 +14,7 @@ import Video from "./pages/Video";
 import ContactForm from "./pages/ContactForm";
 import Author from "./pages/Author";
 import PreviewBlog from "./pages/PreviewBlog";
+import PreviewNewsLetter from "./pages/PreviewNewsLetter";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/preview" element={<PreviewBlog />} />
           <Route path="/newsletter" element={<NewsLetter />} />
+          <Route path="/newsletter/preview" element={<PreviewNewsLetter />} />
           <Route path="/course" element={<Course />} />
           <Route path="/video" element={<Video />} />
           <Route path="/form" element={<ContactForm />} />

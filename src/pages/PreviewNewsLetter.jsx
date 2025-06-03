@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 
 import { BiSolidShare } from "react-icons/bi";
 
-import img from '../assets/previewblog.jpg'
-import CommentSection from '../components/CommentSection';
+import img from "../assets/previewnewsletter.png";
 
-const PreviewBlog = () => {
-    useEffect(() => {
+const PreviewNewsLetter = () => {
+ useEffect(() => {
       setTimeout(() => {
         window.scrollTo({
           top: 0,
@@ -21,13 +20,13 @@ const PreviewBlog = () => {
         <div className="flex items-center gap-3">
           <BiSolidShare className="text-[#2D9CDB] text-2xl" />
           <h2 className="text-xl font-semibold text-[#464255] lg:text-xl">
-            Preview Blog
+            Preview New Letter
           </h2>
         </div>
         <div className="bg-[#B98AFF] text-white text-sm font-medium px-1 h-10 rounded-lg"></div>
       </div>
       {/* body */}
-      <div className="md:w-[80%] mx-auto">
+      <div className="md:w-[80%] mx-auto mb-10">
         {/*  */}
         <div className="flex flex-col gap-10">
           <div>
@@ -94,13 +93,9 @@ const PreviewBlog = () => {
             </p>
           </div>
         </div>
-        {/*  */}
-        <div className='mb-9'>
-            <CommentSection />
-        </div>
       </div>
     </div>
   );
 }
 
-export default PreviewBlog
+export default PreviewNewsLetter
