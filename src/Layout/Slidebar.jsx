@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { GrHomeRounded } from "react-icons/gr";
 import { PiStudentBold } from "react-icons/pi";
@@ -18,6 +18,12 @@ import logo from '../assets/logo.png'
 const Slidebar = () => {
 
   const [activeItem, setActiveItem] = useState("dashboard");
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname.split("/")[1]; // e.g. "/students" => "students"
+    setActiveItem(path || "dashboard"); // যদি path না থাকে তবে dashboard
+  }, [location.pathname]);
 
   return (
     <section className="hidden lg:block bg-white shadow-lg w-[290px] h-screen fixed">
@@ -77,7 +83,7 @@ const Slidebar = () => {
             }`}
             onClick={() => setActiveItem("blog")}
           >
-            <div
+            <Link to="/blog"
               className={`w-full flex items-center gap-5 py-4 px-5 text-lg cursor-pointer ${
                 activeItem === "blog"
                   ? "bg-[#00594526] text-[#2D9CDB] rounded-lg font-semibold"
@@ -86,7 +92,7 @@ const Slidebar = () => {
             >
               <GrBlog />
               <h1>Blog</h1>
-            </div>
+            </Link>
           </div>
           {/* News Letter */}
           <div

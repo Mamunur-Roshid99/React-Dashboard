@@ -49,6 +49,7 @@ const Navbar = () => {
             >
               <Link
                 to="/"
+                onClick={() => setOpen(false)}
                 className={`w-full flex items-center gap-5 py-4 px-5 text-lg cursor-pointer ${
                   activeItem === "dashboard"
                     ? "bg-[#00594526] text-[#2D9CDB] rounded-lg  font-semibold"
@@ -70,6 +71,7 @@ const Navbar = () => {
             >
               <Link
                 to="/students"
+                onClick={() => setOpen(false)}
                 className={`w-full flex items-center gap-5 py-4 px-5 text-lg cursor-pointer ${
                   activeItem === "students"
                     ? "bg-[#00594526] text-[#2D9CDB] rounded-lg font-semibold"
