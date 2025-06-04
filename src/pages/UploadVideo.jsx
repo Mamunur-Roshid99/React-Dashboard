@@ -1,9 +1,33 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect } from "react";
 
 import { BiSolidShare } from "react-icons/bi";
 import { MdOutlineCloudUpload } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-const AddNewBlog = () => {
+const UploadVideo = () => {
+  const [image, setImage] = useState(null);
+  const inputRef = useRef();
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    handleFile(file);
+  };
+
+  const handleFile = (file) => {
+    if (file && file.type.startsWith("image/")) {
+      setImage(URL.createObjectURL(file));
+    }
+  };
+
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+    handleFile(file);
+  };
+
+  const handleClick = () => {
+    inputRef.current.click();
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -12,31 +36,7 @@ const AddNewBlog = () => {
         behavior: "smooth",
       });
     }, 100); // Delay ensures component is mounted
-  }, []);  
-
-    const [image, setImage] = useState(null);
-    const inputRef = useRef();
-
-    const handleDrop = (e) => {
-      e.preventDefault();
-      const file = e.dataTransfer.files[0];
-      handleFile(file);
-    };
-
-    const handleFile = (file) => {
-      if (file && file.type.startsWith("image/")) {
-        setImage(URL.createObjectURL(file));
-      }
-    };
-
-    const handleChange = (e) => {
-      const file = e.target.files[0];
-      handleFile(file);
-    };
-
-    const handleClick = () => {
-      inputRef.current.click();
-    };
+  }, []);
 
   return (
     <div className="container w-[95%] mx-auto mt-5 lg:w-full mb-8">
@@ -45,26 +45,29 @@ const AddNewBlog = () => {
         <div className="flex items-center gap-3">
           <BiSolidShare className="text-[#2D9CDB] text-2xl" />
           <h2 className="text-xl font-semibold text-[#464255] lg:text-xl">
-            Edit Post
+            Upload Video
           </h2>
         </div>
-        <div className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg">
+        <Link
+          to="/video/viewvideo"
+          className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg"
+        >
           Publish
-        </div>
+        </Link>
       </div>
       {/* bottom */}
       <div className="flex flex-col gap-5 lg:flex-row lg:justify-between">
         {/* left */}
         <div className="lg:w-[65%] ">
-          <div className="p-6 bg-white border border-[#E4E7EC] rounded-md space-y-6 lg:h-full">
+          <div className="p-6 bg-white border border-[#E4E7EC] rounded-md space-y-6 lg:h-full mb-8 lg:mb-22">
             {/* Add Title */}
             <div className="flex flex-col gap-2">
               <label className="block text-sm font-medium text-[#0B0B0B] mb-1">
-                Add Title
+                Video Name
               </label>
               <input
                 type="text"
-                placeholder="name@company.com"
+                placeholder="Course Name"
                 className="w-full bg-[#F9FAFB] px-3 py-2 border border-[#E4E7EC] rounded-md  focus:outline-none"
               />
             </div>
@@ -72,26 +75,29 @@ const AddNewBlog = () => {
             {/* Select Category */}
             <div className="flex flex-col gap-2">
               <label className="block text-sm font-medium text-[#0B0B0B] mb-1">
-                Select Category
+                Select Course
               </label>
               <select className="w-full bg-[#F9FAFB] px-3 py-2 border border-[#E4E7EC] rounded-md  focus:outline-none">
-                <option>Category Name</option>
+                <option> Course Name</option>
               </select>
             </div>
 
-            {/* Upload Placeholder */}
-            <div className="border border-[#E4E7EC] rounded-md p-4 bg-[#F9FAFB] flex justify-center items-center h-120 text-center text-[#0B0B0B] text-sm">
-              এই খানে টেক্সট অ্যাড হতে পারে
+            {/* Select Category */}
+            <div className="flex flex-col gap-2">
+              <label className="block text-sm font-medium text-[#0B0B0B] mb-1">
+                Select Sub Course
+              </label>
+              <select className="w-full bg-[#F9FAFB] px-3 py-2 border border-[#E4E7EC] rounded-md  focus:outline-none">
+                <option>Sub Course Name</option>
+              </select>
             </div>
           </div>
         </div>
         {/* right */}
         <div className="lg:w-[35%] ">
-          <div
-            className="p-6 border border-[#E4E7EC] bg-white rounded-md space-y-4 lg:h-full"
-          >
+          <div className="p-6 border border-[#E4E7EC] bg-white rounded-md space-y-4 lg:h-full">
             <label className="block text-sm text-[#0B0B0B] font-medium">
-              Fetchers Image
+              Upload Video File
             </label>
 
             <div
@@ -104,7 +110,7 @@ const AddNewBlog = () => {
                 <img
                   src={image}
                   alt="Preview"
-                  className="max-h-40 object-contain"
+                  className="w-full h-full object-contain"
                 />
               ) : (
                 <div className="flex flex-col gap-1 items-center justify-center">
@@ -127,23 +133,11 @@ const AddNewBlog = () => {
                 hidden
               />
             </div>
-
-            {/* Tag input */}
-            <div>
-              <label className="block text-sm font-normal text-[#0B0B0B] mb-1">
-                Add Tag
-              </label>
-              <textarea
-                placeholder="name@company.com"
-                rows={3}
-                className="w-full px-3 py-2 border border-[#E4E7EC] rounded-md bg-[#F9FAFB] text-sm focus:outline-none h-62"
-              />
-            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default AddNewBlog
+export default UploadVideo;

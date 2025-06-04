@@ -86,8 +86,8 @@ const AddNewsLetter = () => {
         </div>
         {/* right */}
         <div className="lg:w-[35%] ">
-          <div className="p-4 border border-[#E4E7EC] bg-white rounded-md space-y-4 lg:h-full">
-            <label className="block text-sm text-[#0B0B0B]">
+          <div className="p-6 border border-[#E4E7EC] bg-white rounded-md space-y-4 lg:h-full">
+            <label className="block text-sm text-[#0B0B0B] font-medium">
               Fetchers Image
             </label>
 

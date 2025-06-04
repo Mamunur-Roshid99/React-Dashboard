@@ -17,6 +17,12 @@ import PreviewBlog from "./pages/PreviewBlog";
 import PreviewNewsLetter from "./pages/PreviewNewsLetter";
 import AddNewBlog from "./pages/AddNewBlog";
 import AddNewsLetter from "./pages/AddNewsLetter";
+import CreateCourse from "./pages/CreateCourse";
+import ViewCourse from "./pages/ViewCourse";
+import UploadVideo from "./pages/UploadVideo";
+import ViewUploadVideo from "./pages/ViewUploadVideo";
+import FormPreview from "./pages/FormPreview";
+import AuthorPreview from "./pages/AuthorPreview";
 
 function App() {
   return (
@@ -32,9 +38,15 @@ function App() {
           <Route path="/newsletter/preview" element={<PreviewNewsLetter />} />
           <Route path="/newsletter/newnewsletter" element={<AddNewsLetter />} />
           <Route path="/course" element={<Course />} />
+          <Route path="/course/createcourse" element={<CreateCourse />} />
+          <Route path="/course/viewcourse" element={<ViewCourse />} />
           <Route path="/video" element={<Video />} />
+          <Route path="/video/uploadvideo" element={<UploadVideo />} />
+          <Route path="/video/viewvideo" element={<ViewUploadVideo />} />
           <Route path="/form" element={<ContactForm />} />
+          <Route path="/form/previewform" element={<FormPreview />} />
           <Route path="/author" element={<Author />} />
+          <Route path="/author/authorpreview" element={<AuthorPreview />} />
         </Route>
       </Routes>
     </BrowserRouter>

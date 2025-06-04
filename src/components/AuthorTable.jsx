@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AuthorTable = () => {
     const rolls = ["Super Admin", "Admin", "Sub Admin", "Support Admin"];
@@ -55,7 +56,9 @@ const AuthorTable = () => {
                 </td>
                 <td className="px-4 py-4 border-b border-b-[#E9E7FD] text-[#23272E]">
                   <button className="text-[#4D4D4D] pr-3 cursor-pointer">
-                    <FaEye />
+                    <Link to="/author/authorpreview">
+                      <FaEye />
+                    </Link>
                   </button>
                   <button className="text-[#FF7161] cursor-pointer">
                     <FaTrash />

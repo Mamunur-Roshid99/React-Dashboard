@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import CourseTable from "../components/CourseTable";
+import { Link } from "react-router-dom";
 
 const Course = () => {
   useEffect(() => {
@@ -18,9 +19,9 @@ const Course = () => {
         <h2 className="text-xl font-semibold text-[#464255] lg:text-2xl">
           Course
         </h2>
-        <div className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg">
+        <Link to="/course/createcourse" className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg">
           Add Course
-        </div>
+        </Link>
       </div>
       <CourseTable />
     </div>

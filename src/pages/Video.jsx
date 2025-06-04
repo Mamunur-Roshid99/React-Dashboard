@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import VideoTable from "../components/VideoTable";
+import { Link } from "react-router-dom";
 
 const Video = () => {
   useEffect(() => {
@@ -17,9 +18,9 @@ const Video = () => {
         <h2 className="text-xl font-semibold text-[#464255] lg:text-2xl">
           Video
         </h2>
-        <div className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg">
+        <Link to="/video/uploadvideo" className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg">
           Add New Video
-        </div>
+        </Link>
       </div>
       <VideoTable />
     </div>
