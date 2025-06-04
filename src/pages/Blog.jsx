@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 
 import BlogTable from "../components/BlogTable";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
 
@@ -19,7 +20,7 @@ const Blog = () => {
         <h2 className="text-xl font-semibold text-[#464255] lg:text-2xl">
           Our Blog
         </h2>
-        <div className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg">Add New Blog</div>
+        <Link to="/blog/newblog" className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg">Add New Blog</Link>
       </div>
       <BlogTable />
     </div>

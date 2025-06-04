@@ -15,6 +15,8 @@ import ContactForm from "./pages/ContactForm";
 import Author from "./pages/Author";
 import PreviewBlog from "./pages/PreviewBlog";
 import PreviewNewsLetter from "./pages/PreviewNewsLetter";
+import AddNewBlog from "./pages/AddNewBlog";
+import AddNewsLetter from "./pages/AddNewsLetter";
 
 function App() {
   return (
@@ -25,8 +27,10 @@ function App() {
           <Route path="/students" element={<Students />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/preview" element={<PreviewBlog />} />
+          <Route path="/blog/newblog" element={<AddNewBlog />} />
           <Route path="/newsletter" element={<NewsLetter />} />
           <Route path="/newsletter/preview" element={<PreviewNewsLetter />} />
+          <Route path="/newsletter/newnewsletter" element={<AddNewsLetter />} />
           <Route path="/course" element={<Course />} />
           <Route path="/video" element={<Video />} />
           <Route path="/form" element={<ContactForm />} />

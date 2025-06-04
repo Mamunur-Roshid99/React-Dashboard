@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import NewsLetterTable from "../components/NewsLetterTable";
+import { Link } from "react-router-dom";
 
 const NewsLetter = () => {
   useEffect(() => {
@@ -17,9 +18,12 @@ const NewsLetter = () => {
         <h2 className="text-xl font-semibold text-[#464255] lg:text-2xl">
           News Letter
         </h2>
-        <div className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg">
+        <Link
+          to="/newsletter/newnewsletter"
+          className="bg-[#2d9cdb] text-white text-sm font-medium px-3 py-2 rounded-lg"
+        >
           Add News Letter
-        </div>
+        </Link>
       </div>
       <NewsLetterTable />
     </div>
